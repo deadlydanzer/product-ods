@@ -1,0 +1,37 @@
+name: deployment
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_USER: neondb_owner
+          POSTGRES_PASSWORD: npg_fgphZ86vluQW
+          POSTGRES_DB: jdbc:postgresql://ep-wandering-river-a5e59kfl-pooler.us-east-2.aws.neon.tech/neondb
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Flyway migration
+        run: mvn flyway:migrate
+        env:
+          FLYWAY_USER: neondb_owner
+          FLYWAY_PASSWORD: npg_fgphZ86vluQW
+          FLYWAY_URL: jdbc:postgresql://ep-wandering-river-a5e59kfl-pooler.us-east-2.aws.neon.tech/neondb
