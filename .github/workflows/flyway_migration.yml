@@ -16,7 +16,7 @@ jobs:
         env:
           POSTGRES_USER: neon_owner
           POSTGRES_PASSWORD: npg_fgphZ86vluQW
-          POSTGRES_DB: jdbc:postgresql://fep-wandering-river-a5e59kfl-pooler.us-east-2.aws.neon.tech/neondb
+          POSTGRES_DB: jdbc:postgresql://ep-wandering-river-a5e59kfl-pooler.us-east-2.aws.neon.tech/neondb
         ports:
           - 5432:5432
         options: >-
@@ -34,4 +34,4 @@ jobs:
         env:
           FLYWAY_USER: neon_owner
           FLYWAY_PASSWORD: npg_fgphZ86vluQW
-          FLYWAY_URL: jdbc:postgresql://fep-wandering-river-a5e59kfl-pooler.us-east-2.aws.neon.tech/neondb
+          FLYWAY_URL: jdbc:postgresql://ep-wandering-river-a5e59kfl-pooler.us-east-2.aws.neon.tech/neondb
