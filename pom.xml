@@ -15,9 +15,9 @@
         <artifactId>flyway-maven-plugin</artifactId>
         <version>11.3.4</version> <!-- Use latest -->
         <configuration>
-          <url>${POSTGRES_DB}</url>
-          <user>${POSTGRES_USER}</user>
-          <password>${POSTGRES_PASSWORD}</password>
+          <url>${FLYWAY_URL}</url>
+          <user>${FLYWAY_USER}</user>
+          <password>${FLYWAY_PASSWORD}</password>
           <schemas>
             <schema>FULIKZO</schema>
           </schemas>
