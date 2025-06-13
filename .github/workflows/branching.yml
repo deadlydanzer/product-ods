@@ -1,4 +1,4 @@
-name: Check Branch Naming Convention
+name: check branching
 
 on:
   pull_request:
