@@ -14,9 +14,9 @@ jobs:
       postgres:
         image: postgres:15
         env:
-          POSTGRES_USER: flyway_user
-          POSTGRES_PASSWORD: flyway_pass
-          POSTGRES_DB: flyway_db
+          POSTGRES_USER: neon_owner
+          POSTGRES_PASSWORD: npg_fgphZ86vluQW
+          POSTGRES_DB: fep-wandering-river-a5e59kfl-pooler.us-east-2.aws.neon.tech
         ports:
           - 5432:5432
         options: >-
