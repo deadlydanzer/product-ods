@@ -32,6 +32,6 @@ jobs:
       - name: Run Flyway migration
         run: mvn flyway:migrate
         env:
-          FLYWAY_USER: flyway_user
-          FLYWAY_PASSWORD: flyway_pass
-          FLYWAY_URL: jdbc:postgresql://localhost:5432/flyway_db
+          FLYWAY_USER: neon_owner
+          FLYWAY_PASSWORD: npg_fgphZ86vluQW
+          FLYWAY_URL: jdbc:postgresql://fep-wandering-river-a5e59kfl-pooler.us-east-2.aws.neon.tech/neondb
