@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.fulikzo</groupId>
+  <artifactId>product-ods</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.flywaydb</groupId>
+        <artifactId>flyway-maven-plugin</artifactId>
+        <version>11.3.4</version> <!-- Use latest -->
+        <configuration>
+          <url>jdbc:postgresql://ep-hidden-river-a4fujs0z-pooler.us-east-1.aws.neon.tech/fulikzo</url>
+          <user>admin</user>
+          <password>npg_ByGo4APtJH1N</password>
+          <schemas>
+            <schema>PRODUCT_REVIEW</schema>
+          </schemas>
+          <locations>
+            <location>filesystem:src/db</location>
+          </locations>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>42.7.3</version> <!-- Use recent version -->
+    </dependency>
+    <dependency>
+      <groupId>org.flywaydb</groupId>
+      <artifactId>flyway-database-postgresql</artifactId>
+      <version>11.3.4</version>
+    </dependency>
+  </dependencies>
+
+
+
+</project>
