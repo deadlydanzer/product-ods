@@ -16,7 +16,7 @@ jobs:
         env:
           POSTGRES_USER: neon_owner
           POSTGRES_PASSWORD: npg_fgphZ86vluQW
-          POSTGRES_DB: fep-wandering-river-a5e59kfl-pooler.us-east-2.aws.neon.tech
+          POSTGRES_DB: jdbc:postgresql://fep-wandering-river-a5e59kfl-pooler.us-east-2.aws.neon.tech/neondb
         ports:
           - 5432:5432
         options: >-
