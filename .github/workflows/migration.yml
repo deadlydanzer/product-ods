@@ -1,4 +1,4 @@
-name: Flyway Migration
+name: deployment
 
 on:
   push:
@@ -14,9 +14,9 @@ jobs:
       postgres:
         image: postgres:15
         env:
-          POSTGRES_USER: neon_owner
+          POSTGRES_USER: neondb_owner
           POSTGRES_PASSWORD: npg_fgphZ86vluQW
-          POSTGRES_DB: fep-wandering-river-a5e59kfl-pooler.us-east-2.aws.neon.tech
+          POSTGRES_DB: jdbc:postgresql://ep-wandering-river-a5e59kfl-pooler.us-east-2.aws.neon.tech/neondb
         ports:
           - 5432:5432
         options: >-
@@ -32,6 +32,6 @@ jobs:
       - name: Run Flyway migration
         run: mvn flyway:migrate
         env:
-          FLYWAY_USER: flyway_user
-          FLYWAY_PASSWORD: flyway_pass
-          FLYWAY_URL: jdbc:postgresql://localhost:5432/flyway_db
+          FLYWAY_USER: neondb_owner
+          FLYWAY_PASSWORD: npg_fgphZ86vluQW
+          FLYWAY_URL: jdbc:postgresql://ep-wandering-river-a5e59kfl-pooler.us-east-2.aws.neon.tech/neondb
