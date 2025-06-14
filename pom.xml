@@ -6,7 +6,7 @@
 
   <groupId>org.fulikzo</groupId>
   <artifactId>product-ods</artifactId>
-  <version>0.0.3-SNAPSHOT</version>
+  <version>0.0.1-SNAPSHOT</version>
 
   <build>
     <plugins>
@@ -19,7 +19,7 @@
           <user>${FLYWAY_USER}</user>
           <password>${FLYWAY_PASSWORD}</password>
           <schemas>
-            <schema>FULIKZO</schema>
+            <schema>PRDOUCT</schema>
           </schemas>
           <locations>
             <location>filesystem:src/db</location>
