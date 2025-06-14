@@ -15,11 +15,11 @@
         <artifactId>flyway-maven-plugin</artifactId>
         <version>11.3.4</version> <!-- Use latest -->
         <configuration>
-          <url>jdbc:postgresql://ep-hidden-river-a4fujs0z-pooler.us-east-1.aws.neon.tech/fulikzo</url>
-          <user>admin</user>
-          <password>npg_ByGo4APtJH1N</password>
+          <url>${FLYWAY_URL}</url>
+          <user>${FLYWAY_USER}</user>
+          <password>${FLYWAY_PASSWORD}</password>
           <schemas>
-            <schema>PRODUCT_REVIEW</schema>
+            <schema>PRDOUCT</schema>
           </schemas>
           <locations>
             <location>filesystem:src/db</location>
