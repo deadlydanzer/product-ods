@@ -13,8 +13,8 @@ Use the following format when creating new feature branches:
 feature/<your-username>/<short-description>
 
 ##### ✅ Examples:
-- `feature/john-doe/login-form-ui`
-- `feature/alice/payment-api-integration`
+- `feature/johndoe/login_form_ui`
+- `feature/alice/payment_api_integration`
 
 #### 🧭 Rules
 
