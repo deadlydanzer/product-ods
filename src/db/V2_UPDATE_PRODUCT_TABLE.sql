@@ -1,0 +1,4 @@
+--add new column to product table
+ALTER TABLE PRODUCT
+ADD COLUMN PRODUCT_TYPE VARCHAR
+;
