@@ -11,6 +11,6 @@ CREATE TABLE PRODUCT_REVIEW(
     PR_CREATED_BY    VARCHAR                         NOT NULL,
     PR_CREATED_TS    TIMESTAMP WITHOUT TIME ZONE     NOT NULL,
     PR_MODIFIED_TS   TIMESTAMP WITHOUT TIME ZONE     NULL,
-    PR_STATUS        VARCHAR                         NOT NULL
+    PR_STATUS        VARCHAR                         NOT NULL,
     PRIMARY KEY(PR_ID)
 );
