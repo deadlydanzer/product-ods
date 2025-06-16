@@ -1,6 +1,7 @@
 -- Product Review Table 
 
-DROP TABLE IF EXISTS product_review;
+DROP TABLE IF EXISTS PRODUCT_REVIEW
+;
 
 CREATE TABLE PRODUCT_REVIEW(
 
