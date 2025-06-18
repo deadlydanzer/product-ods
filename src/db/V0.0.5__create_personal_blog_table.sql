@@ -1,0 +1,17 @@
+-- PERSONAL BLOG TABLE
+
+DROP TABLE IF EXISTS PERSONAL_BLOG
+;
+
+CREATE TABLE PERSONAL_BLOG(
+    PRS_BLOG_ID              BIGSERIAL                    NOT NULL,
+    PRS_BLOG_TITLE           VARCHAR                      NOT NULL,
+    PRS_BLOG_DESCRIPTION     TEXT                         NOT NULL,
+    PRS_BLOG_TYPE            VARCHAR                      NOT NULL,
+    PRS_BLOG_DATA            JSONB                        NULL,
+    PRS_BLOG_CREATED_BY      VARCHAR                      NOT NULL,
+    PRS_BLOG_CREATED_TS      TIMESTAMP WITHOUT TIME ZONE  NOT NULL DEFAULT NOW(),
+    PRS_BLOG_UPDATED_TS      TIMESTAMP WITHOUT TIME ZONE  NULL,
+    PRS_BLOG_STATUS          VARCHAR                      NULL,
+    PRIMARY KEY(PRS_BLOG_ID)
+);
